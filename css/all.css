@@ -72,15 +72,14 @@ a{
   width: 300px;
   font-size: 24px;
   font-weight: 500;
-  /* 65 - 16*2(padding) - 1(border) = 32 */
-  line-height: 32px;    
+  line-height: 40px;    
 }
 .sidebar li a{
   display: block;
   border: 1px solid #EAF0ED;
 }
 .sidebar h2 ,.sidebar li a{
-  padding: 16px 0;
+  padding: 12.5px 0;
   text-align: center;
 }
 .sidebar li a:hover{
@@ -138,25 +137,24 @@ a{
   border-bottom: 1px solid #EAF0ED;
   border-right: 1px solid #EAF0ED;
   font-size: 20px;
+  line-height: 56px;
   text-align: center;
 }
 .productList .text h3{
   flex: 0 1 57.7%;
-  padding: 14px 0;
   font-weight: 300;
 }
 .productList .text span{
   flex: 0 1 42.3%;
-  padding: 14px 0;
   border-left: 1px solid #EAF0ED;
   font-weight: 500;
 }
 .productList .btn{
   width: 100%;
-  padding: 16px 0;
   border: 1px solid #EAF0ED;
   font-size: 24px;
   font-weight: bold;
+  line-height: 65px;
   transition: .2s;
 }
 .productList .btn:hover{ 
@@ -182,7 +180,11 @@ a{
 }
 .pagination-list li a{
   display: block;
-  padding: 16px 0;
+  /* 
+  問題四. 高度計算，這邊不太確定要減掉上下邊框嗎?
+  (高 60px - 行距 20px - 上下邊框 2 px) / 2 = 19px
+  */
+  padding: 19px 0;
   border: 1px solid #EAF0ED;
   font-size: 20px;
   font-weight: 300;
