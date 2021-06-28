@@ -1,0 +1,194 @@
+@import url("reset.css");
+
+/* 共通 */
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+body{
+  font-size: 16px;
+  color: #3F5D45;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.container{
+  width: 940px;
+  margin: 0 auto;
+}
+img{
+  display: block;
+  /* width: 100%; */
+}
+a{
+  color: #3F5D45;
+  text-decoration: none;
+}
+.bg-primary{
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+.bg-secondary{
+  color: #3F5D45;
+  background-color: #EAF0ED;
+}
+
+/* header */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.logo img{
+  width: 220px;
+}
+.main-menu{
+  display: flex;
+  width: 295px;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-menu > a{
+  padding: 10px 0 8px;
+  font-weight: 500; 
+  transition: .2s;
+}
+.main-menu > a:hover{
+  text-decoration: underline;
+}
+.main-menu .shopping-cart{
+  margin-right: 20px;   /* 不與 banner 貼齊 */
+  font-size: 18px;
+}
+
+/* banner */
+.banner{
+  margin-bottom: 60px;
+}
+
+/* content */
+.content{
+  display: flex;
+}
+.sidebar{
+  width: 300px;
+  font-size: 24px;
+  font-weight: 500;
+  /* 65 - 16*2(padding) - 1(border) = 32 */
+  line-height: 32px;    
+}
+.sidebar li a{
+  display: block;
+  border: 1px solid #EAF0ED;
+}
+.sidebar h2 ,.sidebar li a{
+  padding: 16px 0;
+  text-align: center;
+}
+.sidebar li a:hover{
+  background-color: #EAF0ED;
+}
+.sidebar a ~ a{
+  border-top: none;
+}
+
+.productList {
+  width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.productList .item{
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.productList .pic{
+  position: relative;
+  overflow: hidden;
+}
+.productList .pic img{
+  transition: .4s;
+}
+.productList .pic img:hover{ 
+  transform: scale(1.2);
+  /* cursor: pointer; */
+}
+.productList .pic .label{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 10px;
+  writing-mode: vertical-lr;
+  /* font-weight: 500; */
+  letter-spacing: 0.25em;
+  z-index: 1;
+}
+.productList .love{
+  position: absolute;
+  top: 19px;
+  right: 22px;
+  font-size: 20px;
+  z-index: 1;
+  transition: .2s;
+}
+.productList .love:hover{
+  color: #ffe180;
+}
+.productList .text{
+  display: flex;
+  border-left: 1px solid #EAF0ED;
+  border-bottom: 1px solid #EAF0ED;
+  border-right: 1px solid #EAF0ED;
+  font-size: 20px;
+  text-align: center;
+}
+.productList .text h3{
+  flex: 0 1 57.7%;
+  padding: 14px 0;
+  font-weight: 300;
+}
+.productList .text span{
+  flex: 0 1 42.3%;
+  padding: 14px 0;
+  border-left: 1px solid #EAF0ED;
+  font-weight: 500;
+}
+.productList .btn{
+  width: 100%;
+  padding: 16px 0;
+  border: 1px solid #EAF0ED;
+  font-size: 24px;
+  font-weight: bold;
+  transition: .2s;
+}
+.productList .btn:hover{ 
+  color: #EAF0ED;
+  background-color: #3F5D45;
+  cursor: pointer; 
+}
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 10px 0 60px;  /* 注意上面 margin */
+}
+.pagination-list{
+  display: flex;
+  width: 300px;
+}
+.pagination-list > li{
+  width: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+.pagination-list li a{
+  display: block;
+  padding: 16px 0;
+  border: 1px solid #EAF0ED;
+  font-size: 20px;
+  font-weight: 300;
+}
+.pagination-list .active{
+  color: #EAF0ED;
+  background-color: #3F5D45;
+  border-color: #3F5D45;
+}
